@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/drawable/bottom_radius_layout_backgraund.xml" value="0.2645" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/drawable/ic_baseline_file_download_24.xml" value="0.2875" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/drawable/ic_baseline_file_upload_24.xml" value="0.2875" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2875" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/drawable/wheat_layout_backgraund.xml" value="0.2645" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/add_arrived_dialog_layout.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/add_gone_dialog_layout.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/arrived_item_layout.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_product_arrived.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_product_gone.xml" value="0.3287671232876712" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_search.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/gone_item_layout.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
