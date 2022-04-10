@@ -11,33 +11,49 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_productGoneFragment"
-            app:destination="@id/productGoneFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_productArrivedFragment"
-            app:destination="@id/productArrivedFragment" />
+            android:id="@+id/action_homeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
     </fragment>
     <fragment
-        android:id="@+id/productArrivedFragment"
-        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.ProductArrivedFragment"
-        android:label="fragment_product_arrived"
-        tools:layout="@layout/fragment_product_arrived" >
+        android:id="@+id/productFragment"
+        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
         <action
             android:id="@+id/action_productArrivedFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/productGoneFragment"
-        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.ProductGoneFragment"
-        android:label="fragment_product_gone"
-        tools:layout="@layout/fragment_product_gone" >
         <action
-            android:id="@+id/action_productGoneFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            android:id="@+id/action_productFragment_to_addGoneDialogFragment"
+            app:destination="@id/addGoneDialogFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_addArrivedDialogFragment"
+            app:destination="@id/addArrivedDialogFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_trafficsFragment"
+            app:destination="@id/trafficsFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="uz.abubakir_m.a.developer.sales_manager.fragments.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_trafficsFragment"
+            app:destination="@id/trafficsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addArrivedDialogFragment"
+        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.AddArrivedDialogFragment"
+        android:label="fragment_add_arrived_dialog"
+        tools:layout="@layout/fragment_add_arrived_dialog" />
+    <fragment
+        android:id="@+id/addGoneDialogFragment"
+        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.AddGoneDialogFragment"
+        android:label="fragment_add_gone_dialog"
+        tools:layout="@layout/fragment_add_gone_dialog" />
+    <fragment
+        android:id="@+id/trafficsFragment"
+        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.TrafficsFragment"
+        android:label="fragment_traffics"
+        tools:layout="@layout/fragment_traffics" />
 </navigation>

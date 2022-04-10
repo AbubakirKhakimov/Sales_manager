@@ -12,11 +12,17 @@
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/add_arrived_dialog_layout.xml" value="0.3625" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/add_gone_dialog_layout.xml" value="0.3625" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/arrived_item_layout.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_add_arrived_dialog.xml" value="0.25" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_add_gone_dialog.xml" value="0.25" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_product.xml" value="0.25" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_product_arrived.xml" value="0.3625" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_product_gone.xml" value="0.3287671232876712" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_search.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/fragment_traffics.xml" value="0.25" />
         <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/gone_item_layout.xml" value="0.3625" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/sales_item_layout.xml" value="0.25" />
+        <entry key="..\:/PROEKT/Android Studio/Sales manager/app/src/main/res/layout/traffic_item_layout.xml" value="0.25" />
       </map>
     </option>
   </component>

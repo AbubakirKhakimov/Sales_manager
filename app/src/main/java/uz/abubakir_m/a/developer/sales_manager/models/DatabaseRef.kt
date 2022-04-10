@@ -5,6 +5,5 @@ import com.google.firebase.ktx.Firebase
 
 object DatabaseRef {
     val rootRef = Firebase.database.reference
-    val arrivedRef = Firebase.database.getReference(Keys.ARRIVED_KEY)
-    val goneRef = Firebase.database.getReference(Keys.GONE_KEY)
+    val salesRef = Firebase.database.getReference(Keys.SALES_KEY)
 }

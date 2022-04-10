@@ -4,26 +4,26 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
 
 class MainViewModel:ViewModel() {
-    val arrivedData = MutableLiveData<ArrayList<Arrived>>()
-    val goneData = MutableLiveData<ArrayList<Gone>>()
-    val arrivedSearchResultsData = MutableLiveData<ArrayList<Arrived>>()
-    val goneSearchResultsData = MutableLiveData<ArrayList<Gone>>()
+    val salesData = MutableLiveData<ArrayList<Sales>>()
+    val salesSearchResultsData = MutableLiveData<ArrayList<Sales>>()
+    val writeIsSuccessful = MutableLiveData<String>()
     val errorData = MutableLiveData<String>()
 
-    fun loadArrived(){
-        DatabaseRef.arrivedRef.addListenerForSingleValueEvent(object :ValueEventListener{
+    fun loadSales(){
+        DatabaseRef.salesRef.addListenerForSingleValueEvent(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                val list = ArrayList<Arrived>()
+                val list = ArrayList<Sales>()
 
                 for (item in snapshot.children){
-                    list.add(item.getValue(Arrived::class.java)!!)
+                    list.add(item.getValue(Sales::class.java)!!)
                 }
                 list.reverse()
 
-                arrivedData.value = list
+                salesData.value = list
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -32,37 +32,18 @@ class MainViewModel:ViewModel() {
         })
     }
 
-    fun loadGone(){
-        DatabaseRef.goneRef.addListenerForSingleValueEvent(object :ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val list = ArrayList<Gone>()
+    fun loadSalesSearchResults(searchingText: String){
+        val query = DatabaseRef.salesRef.orderByChild("name").equalTo(searchingText)
 
-                for (item in snapshot.children){
-                    list.add(item.getValue(Gone::class.java)!!)
-                }
-                list.reverse()
-
-                goneData.value = list
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                errorData.value = error.message
-            }
-        })
-    }
-
-    fun loadArrivedSearchResults(searchingText: String){
-        val query = DatabaseRef.arrivedRef.orderByChild("name").equalTo(searchingText)
         query.addListenerForSingleValueEvent(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                val list = ArrayList<Arrived>()
+                val list = ArrayList<Sales>()
 
                 for (item in snapshot.children){
-                    list.add(item.getValue(Arrived::class.java)!!)
+                    list.add(item.getValue(Sales::class.java)!!)
                 }
-                list.reverse()
 
-                arrivedSearchResultsData.value = list
+                salesSearchResultsData.value = list
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -71,24 +52,14 @@ class MainViewModel:ViewModel() {
         })
     }
 
-    fun loadGoneSearchResults(searchingText: String){
-        val query = DatabaseRef.goneRef.orderByChild("name").equalTo(searchingText)
-        query.addListenerForSingleValueEvent(object :ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val list = ArrayList<Gone>()
-
-                for (item in snapshot.children){
-                    list.add(item.getValue(Gone::class.java)!!)
-                }
-                list.reverse()
-
-                goneSearchResultsData.value = list
+    fun writeFirebase(dbRef:DatabaseReference, item: Sales){
+        dbRef.setValue(item).addOnCompleteListener {
+            if (it.isSuccessful){
+                writeIsSuccessful.value = "Successful!"
+            }else{
+                errorData.value = "Error!"
             }
-
-            override fun onCancelled(error: DatabaseError) {
-                errorData.value = error.message
-            }
-        })
+        }
     }
 
 }

@@ -25,13 +25,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.arrived.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_productArrivedFragment)
-        }
-
-        binding.gone.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_productGoneFragment)
-        }
+        binding.animation.postDelayed({
+            findNavController().navigate(R.id.action_homeFragment_to_productFragment)
+        }, 2000)
 
     }
 
