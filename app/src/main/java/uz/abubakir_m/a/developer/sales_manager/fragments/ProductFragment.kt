@@ -72,6 +72,15 @@ class ProductFragment : Fragment(), SalesCallBack {
             AddGoneDialogFragment().show(requireActivity().supportFragmentManager, "tag")
         }
 
+        binding.lockApp.setOnClickListener {
+            findNavController().navigate(R.id.action_productFragment_to_authenticationFragment)
+        }
+
+        binding.lockApp.setOnLongClickListener {
+            SetPasswordFragment().show(childFragmentManager, "tag")
+            true
+        }
+
     }
 
     private fun loadData(){

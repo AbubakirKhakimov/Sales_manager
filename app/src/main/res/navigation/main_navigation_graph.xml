@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/authenticationFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_productFragment"
-            app:destination="@id/productFragment" />
+            app:destination="@id/productFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/productFragment"
@@ -31,6 +33,14 @@
         <action
             android:id="@+id/action_productFragment_to_trafficsFragment"
             app:destination="@id/trafficsFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_authenticationFragment"
+            app:destination="@id/authenticationFragment"
+            app:popUpTo="@id/productFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_productFragment_to_authenticationFragment2"
+            app:destination="@id/authenticationFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -56,4 +66,15 @@
         android:name="uz.abubakir_m.a.developer.sales_manager.fragments.TrafficsFragment"
         android:label="fragment_traffics"
         tools:layout="@layout/fragment_traffics" />
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="uz.abubakir_m.a.developer.sales_manager.fragments.AuthenticationFragment"
+        android:label="fragment_authentication"
+        tools:layout="@layout/fragment_authentication" >
+        <action
+            android:id="@+id/action_authenticationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/authenticationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
